@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boletim escololar</title>
+</head>
+<body>
+	<header>
+	 	<h1>Boletim escolar</h1>
+	</header> 
+
+	 	<form>
+	 		<label for=""></label>
+	 		<input type="text" id="nome" name="nome" placeholder>
+	 		<input type="text" id="email" name="email" placeholder="email">
+	 		<input type="number" id="nota1" name="nota1" placeholder=" Qual foi sua primeira nota">
+	 		<input type="number" id="nota2" name="nota2" placeholder="Qual foi sua segunda nota">
+	 		<input type="submit" id="enviar" name="enviar" placeholder="Enviar Dados">
+	    </form>
+
+	    <script type="text/javascript">
+
+	    	function pulalinha(){
+	    		document.write('<br>');
+	    	}
+	    	function soma(){
+	    		var nome, email, nota1, nota2;
+	    		nome=(document.getElementById('nome').value);
+	    		email=(document.getElementById('email').value);
+	    		nota1=(document.getElementById('nota1').value);
+	    		nota2=(document.getElementById('nota2').value);
+	    		enviar=(document.getElementById('enviar').value);
+	    		var media= nota1 + nota2;
+	    		return media;
+	    		pulalinha();
+	    	}
+	    	enviar.addEventListener('click',enviar);
+	    	soma("sua primeira nota foi = " .nota1);
+	    	pulalinha();
+	    	soma('Sua segunda nota foi = ' .nota2);
+	    	pulalinha();
+	    	soma('sua média é = '.media);
+
+	    </script>
+	
+</body>
+</html>

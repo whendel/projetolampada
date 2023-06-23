@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>  
+		<header>
+			<h1>Relembrando javascript</h1>
+		</header>
+		<div>
+			<img src= "../img/lampOFF.png" alt="lampada desligada" id="lamp" width="100px;">
+
+		</div>
+		
+		<div>
+			<button id="turnOFF">Desligado</button>
+			<button id="turnON">Ligado</button>
+		</div>
+		<script type="text/javascript"> 
+			const turnON = document.getElementById('turnON');
+			const turnOFF = document.getElementById('turnOFF');
+			const lamp = document.getElementById('lamp');
+
+
+			function isLampBroken(){ 
+				return lamp.src.indexOf('lampBroken')>-1;
+			}
+
+			function lampON(){
+				if (!isLampBroken() ){ 
+				lamp.src = '../img/lampON.png';
+			 }
+			}
+			function lampOFF(){
+				if (!isLampBroken() ) {  
+				lamp.src = '../img/lampOFF.png';
+			 }
+			}
+			function lampBroken(){
+				if (!isLampBroken() ) {  
+				lamp.src = '../img/lampBroken.png';
+			 }
+			} 
+
+			turnON.addEventListener('click', lampON);
+			turnOFF.addEventListener('click', lampOFF);
+			lamp.addEventListener('mouseover', lampON);
+			lamp.addEventListener('mouseleave', lampOFF);
+			lamp.addEventListener('dblclick', lampBroken);
+		</script>
+	</div>	
+</body>
+</html>
